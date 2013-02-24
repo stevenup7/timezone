@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="span8" id="main-content">
+  <h1>Welcome to Timezone Walrus</h1>
+  <div>
+    <p>When you are sitting in Chicago wondering "What time is it in New York City?", "What time is it in London", and "What time is it in Tokyo" - you probably don't feel like timezones are your friend. But Timezone Walrus is your friend!</p>
+
+    <p>With Timezone Walrus you can easily compare times beetween Paris and Prague, Moscow and Melbourne, Tokyo and Toronto. No need to worry about waking someone up when you call them or trying to manually keep track of multiple timezones when you're on the go.</p>
+    
+    <p>Timezone Walrus remembers times and daylight savings and everything else so you don't have to. And Walrus never forgets.</p>
+
+    <p><a href="/tzone/app">Enough blah let me get on with it... </a></p>
+  </div>
+</div>
+<div class="span4" id="content1">
+  <h2>About You</h2>
+  <div id="your-location" />
+</div>
+{% endblock %}
+{% block optional_scripts %}
+
+    <script type="text/javascript" src="static/libs/require.js"></script>
+    <script type="text/javascript" src="static/js/require.conf.js"></script>
+    <script type="text/javascript">
+      require(["/static/js/IndexPageView.js"], function(IndexPageView){
+         new IndexPageView({"container":"#your-location"});
+      });
+    </script>
+<!--    <script type="text/javascript" src="/static/js/TZoneApp.TZoneContact.js"></script>
+    <script type="text/javascript" src="/static/js/UserGeoLocation.js"></script>
+    <script type="text/javascript" src="/static/js/IndexPageView.js"></script> -->
+{% endblock %}

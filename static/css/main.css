@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700);
+
+#top {
+    background-color: whiteSmoke;
+    color: #333;
+    padding: 5px 50px 5px 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+#top>div {
+    text-align: right;
+}
+#top a {
+    color: #333;
+}
+#messages {
+    margin-top: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.step h3{
+    color: #333;
+}
+#main-menu-wrapper {
+    background: #593e3e; /* Old browsers */
+    background: -moz-linear-gradient(top, #593e3e 0%, #23190e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#593e3e), color-stop(100%,#23190e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #593e3e 0%,#23190e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #593e3e 0%,#23190e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #593e3e 0%,#23190e 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #593e3e 0%,#23190e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#593e3e', endColorstr='#23190e',GradientType=0 ); /* IE6-9 */
+
+    border-bottom: 1px solid #06A;
+    margin-bottom: 40px;
+}
+#main-menu {
+    padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: .9em;
+}
+#main-menu a,
+#main-menu h1{
+    color: white;
+}
+.map-step {
+    padding-left: 75px;
+    padding-right: 75px;
+    height: 100px;
+}
+
+#content2 {
+    --background: red;
+}
+
+#stepCarousel {
+/*    visibility:collapse; */
+}
+
+#main-menu li{
+    color: white;
+    border-left: 1px solid white;
+}
+#main-menu li:first-child{
+    border-left-width: 0px;
+}
+
+#friendlist ul li{
+    background-color: #efefef;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+.times-view{
+    width: 150px; 
+    float: left;
+    border: 2px solid white;
+    background-color: #efefef;
+}
+.times-view h2,
+.times-view .clock{
+    line-height: 14px;
+    width: 140px;
+    height: 24px;
+    overflow: hidden;
+    font-size: 12px;
+    color: white;
+    background-color: #666;
+    margin: 0;
+    padding: 5px;
+}
+.nowline {
+    border-top: 1px solid red;
+    height:1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.night,
+.day,
+.current,
+.work {
+    position: relative;
+    padding: 2px 0 0 4px;
+    height: 22px;
+    font-size: 12px;
+}
+.night {
+    background-color: #999;
+}
+.day {
+    background-color: #fffbcc;
+}
+.work {
+    background-color: #ccf1ff;
+}
+
+
+
+.contact {
+    position: relative;
+}
+
+#contactview .contract,
+#contactview .expand {
+    cursor: pointer; 
+    cursor: hand; 
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+#contactview .add-to-table-icon {
+    cursor: pointer; 
+    cursor: hand; 
+    position: absolute;
+    top: 2px;
+    right: 20px;
+}

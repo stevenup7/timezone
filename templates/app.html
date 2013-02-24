@@ -1,0 +1,60 @@
+{% extends "main.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="span8" id="main-content">
+  <h1>Compare Timezones </h1>
+  <div id="app-content">
+    <div id="map-canvas" style="height: 400px;">
+
+    </div>
+    <div id="times-wrapper" ></div>
+  </div>
+</div>
+<div class="span4" id="content1">
+  <h2>Your Contacts</h2>
+  <div id="friendlist" ></div>
+
+  <script type="text/javascript">
+    <!--
+	google_ad_client = "ca-pub-4954048601102048";
+	/* Big Fat Ads */
+	google_ad_slot = "9792083492";
+	google_ad_width = 300;
+	google_ad_height = 600;
+    //-->
+  </script>
+  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+<div id="userAddModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="userAddModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="userAddModalLabel">Name your new contact</h3>
+  </div>
+  <div class="modal-body">
+    <label>New Contact's Name:</label><input type="text" class="new-users-name" />
+    <p class="alert alert-error hide">You need to name your walrus buddy.</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary save-name">Save changes</button>
+  </div>
+</div>
+{% endblock %}
+{% block optional_scripts %}
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&sensor=true"></script>
+    <script type="text/javascript" src="/static/libs/require.js"></script>
+    <script type="text/javascript" src="/static/js/require.conf.js"></script>
+    <script type="text/javascript">
+      var google_api_key = '{{ google_api_key }}';
+      require(["/static/js/AppPageView.js"], function(AppPageView){
+         new AppPageView({"container":"#app-content"});
+      });      
+    </script>
+<!--    <script type="text/javascript" src="/static/js/TZoneApp.TZoneContact.js"></script>
+    <script type="text/javascript" src="/static/js/UserGeoLocation.js"></script>
+    <script type="text/javascript" src="/static/js/IndexPageView.js"></script> -->
+{% endblock %}
